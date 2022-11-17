@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chronic Kidney Disease Prediction</title>
+  </head>
+  <body>
+    <style>
+      body {
+        min-height: 100%;
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0),
+            rgba(78, 5, 48, 0.3)
+          ),
+          url();
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+      }
+    </style>
+    <br />
+    <div
+      id="demobox"
+      style="
+        background-color: darkmagenta;
+        padding: 10px;
+        border: 1px solid green;">
+      <h4 style="color: white; text-align: center;">
+      </h4>
+    </div>
+
+
+    <h4 align="center">
+      <b>
+        <font face="Monaco" color="white" size="20"
+          >Chronic Kidney Disease Prediction</font>
+        </b >
+    </h4>
+    </div>
+
+
+    <br /><br />
+    <form action="{{ url_for('predict') }}" class="predict" method="POST"><br>
+    <div style="font-size: x-large; text-align: center;">
+        <label for="burea">Enter your Blood urea:</label>
+        <input type="number" id="fname" name="fname"><br><br>
+        <label for="bglucose">Enter your Blood Glucose Random:</label>
+        <input type="number" id="bglucose" name="bglucose"><br><br>
+        <label for="anemia">Select Anemia or not :</label>
+        <select name="anemia" id="anemia">
+        <option value="1">Yes</option>
+        <option value="0">No</option><br><br>
+        </select><br><br>
+        <label for="Coronary">Select Coronary Artery Disease or not :</label>
+        <select name="Coronary" id="Coronary">
+        <option value="1">Yes</option>
+        <option value="0">No</option><br><br>
+        </select><br><br>
+        <label for="cell">Select Pus Cell Normal or Abnormal :</label>
+        <select name="cell" id="cell">
+        <option value="1">Normal</option>
+        <option value="0">Abnormal</option><br><br>
+        </select><br><br>
+        <label for="rbc">Select Red Blood Cell Level Normal or Abnormal :</label>
+        <select name="rbc" id="rbc">
+        <option value="1">Normal</option>
+        <option value="0">Abnormal</option><br><br>
+        </select><br><br>
+        <label for="dia">Select Diabetes Mellitus or not :</label>
+        <select name="dia" id="dia">
+        <option value="1">Yes</option>
+        <option value="0">No</option><br><br>
+        </select><br><br>
+        <label for="enema">Select Pedal Enema or not :</label>
+        <select name="enema" id="enema">
+        <option value="1">Yes</option>
+        <option value="0">No</option><br><br>
+        </select><br><br>
+        <button>Submit</button>
+    </div>
+    </form>
+
+    <hr />
+  </body>
+</html>
